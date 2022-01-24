@@ -209,13 +209,16 @@ class VideoOperator(object):
             self.save_count = 0
 
     def set_save_path(self, save_path=None):
-        self.user_save_path = save_path
+    #    self.user_save_path = save_path
         if self.save_path is None and save_path is None:
+            print('create video name directory')
             self.save_path = self.video_path.parent.joinpath(self.video_path.stem)
             os.makedirs(self.save_path, exist_ok=True)
         elif self.save_path is not None and save_path is None:
+            print('create save path directory')
             os.makedirs(self.save_path, exist_ok=True)
         else:
+            print('create argument save path directory')
             self.save_path = save_path
             os.makedirs(self.save_path, exist_ok=True)
 
