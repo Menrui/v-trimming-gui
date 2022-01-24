@@ -127,6 +127,8 @@ class VideoOperator(object):
             playtime=(video.get(FRAME_COUNT) / video.get(FPS)) * 1000,
         )
         self.video = video
+        self.video_path = video_path
+        self.save_count = 0
         self.is_init = True
         self.play_status.is_stop = False
         self.set_save_path(self.user_save_path)
