@@ -295,8 +295,9 @@ class Main:
 
                 # スキップフレーム分とばす
                 if not self.operator.play_status.is_pause and values['-SKIP SLIDER-'] != 0:
-                    self.frame_count += values["-SKIP SLIDER-"]
-                    self.operator.set_video_pos(self.frame_count)
+                #    self.frame_count += values["-SKIP SLIDER-"]
+                    skip_frame = self.operator.get_cur_f() + values["-SKIP SLIDER-"]
+                    self.operator.set_video_pos(skip_frame)
 
                 # フレームの読込 ##############################################
                 self.frame = self.operator.get_frame()
