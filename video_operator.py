@@ -201,10 +201,10 @@ class VideoOperator(object):
         self.video.set(cv2.CAP_PROP_POS_FRAMES, frames)
     
     def _check_save_path(self):
-        if list(self.save_path.glob('*.png')):
-            last_img = sorted(list(self.save_path.glob('*.png')))[-1]
-            last_num = str(last_img.stem).split('__')[-1]
-            self.save_count = int(last_num) + 1
+        if list(self.save_path.glob(f'*{self.video_path.stem}*.png'))):
+            last_img_num_str = sorted([img_path.split('__')[-1] for img_path in self.save_path.glob(f'*{self.video_path.stem}*.png'))])[-1]
+            # last_num = str(last_img.stem).split('__')[-1]
+            self.save_count = int(last_img_num_str) + 1
         else:
             self.save_count = 0
 
