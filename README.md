@@ -11,10 +11,7 @@ Environments under [Poetry >= 1.0.0](https://python-poetry.org/)
 ```bash
 pip install poetry  # if you are not using poetry
 poetry config virtualenvs.in-project true
-```
 
-# Installation
-```bash
 poetry install  # if you want to build by pyinstaller
 poetry install --no-dev  # If you want to run from python
 ```
