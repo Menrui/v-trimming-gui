@@ -16,6 +16,17 @@ poetry install  # if you want to build by pyinstaller
 poetry install --no-dev  # If you want to run from python
 ```
 
+condaを使う場合
+```bash
+conda create -n {environmment name} pip
+conda activate {environment name}
+pip install poetry  # if you are not using poetry
+poetry config virtualenvs.in-project true
+
+poetry install  # if you want to build by pyinstaller
+poetry install --no-dev  # If you want to run from python
+```
+
 # Usage
 Run  
 ```bash
