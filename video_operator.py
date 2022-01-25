@@ -197,6 +197,9 @@ class VideoOperator(object):
     def get_cur_f(self):
         return self.video.get(POS_FRAMES)
     
+    def get_cur_msec(self):
+        return self.video.get(POS_MSEC)
+    
     def set_video_pos(self, frames: int):
         self.video.set(cv2.CAP_PROP_POS_FRAMES, frames)
     
