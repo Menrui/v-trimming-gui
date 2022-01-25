@@ -2,6 +2,17 @@
 A GUI application for cropping images from videos.  
 動画をシークバーで操作しながらスクリーンショットを撮るためのアプリ。
 
+# Feature
+### Startup Screen
+![image](https://user-images.githubusercontent.com/50891743/151005614-809746b5-bb9f-4bf6-a858-78bd60d1c5b7.png)
+### Select the directory
+![image](https://user-images.githubusercontent.com/50891743/151006562-feb1f06b-2333-4980-b751-518f0f69a9b0.png)
+### Main UI
+* Movie Screen : Video Preview
+* Video Operation Screen : Video Operation UI
+* Directry Viewer Screen : Select Video File UI (Sub-directories can also be loaded.)
+![image](https://user-images.githubusercontent.com/50891743/151011526-2cfb3ef5-f0ee-49ba-baea-2a65823590f5.png)
+
 # Requirement
 * Python >=3.7
 * opencv-python ^4.5.5
@@ -64,3 +75,4 @@ python main.py
 * 起動時勝手に初回に読み込むファイル名で保存ディレクトリを作成する
 * 別の動画ファイルを読み込んでも保存ディレクトリの名前が変わらない
   * 自分で設定した場合は変更されない
+* 動画再生が重たい
