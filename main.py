@@ -76,24 +76,24 @@ class Main:
                 sg.Button('<<<', size=(5, 1)),
                 sg.Button('<<', size=(5, 1)),
                 sg.Button('<', size=(5, 1)),
-                sg.Button('Play / Stop', size=(9, 1)),
-                sg.Button('Reset', size=(7, 1)),
+                sg.Button('Play / Pause', size=(9, 1)),
+                sg.Button('Stop', size=(7, 1)),
                 sg.Button('>', size=(5, 1)),
                 sg.Button('>>', size=(5, 1)),
                 sg.Button('>>>', size=(5, 1))
             ],
-            [sg.Button('screenshot', size=(5, 1))],
+            [sg.Button('Screenshot', size=(10, 1))],
             [sg.HorizontalSeparator()],
             # [sg.Output(size=(65, 5), key='-OUTPUT-')],
             [sg.Button('Clear'), sg.Button('Quit'), sg.Button('Save Dir'), sg.InputText('', key='s_path')]
         ]
 
-        # Windowを生成
+        # Window Generate
         window = sg.Window('Video Operation', layout, 
                             location=(0, 0), 
                             return_keyboard_events=True, 
                             use_default_focus=False)
-        # 動画情報の表示
+        # Video Infomation
         self.event, values = window.read(timeout=0)
         print('ファイルが読み込まれました。')
         print('File Path: ' + str(self.f_path))
