@@ -11,7 +11,7 @@ A GUI application for cropping images from videos.
 * Movie Screen : Video Preview
 * Video Operation Screen : Video Operation UI
 * Directry Viewer Screen : Select Video File UI (Sub-directories can also be loaded.)
-![image](https://user-images.githubusercontent.com/50891743/151011526-2cfb3ef5-f0ee-49ba-baea-2a65823590f5.png)
+![image](https://user-images.githubusercontent.com/50891743/151013258-b5bff0bb-3c1e-4e67-b5b2-eaef9abf08ad.png)
 
 # Requirement
 * Python >=3.7
