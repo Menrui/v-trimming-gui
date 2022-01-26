@@ -2,15 +2,15 @@
 A GUI application for cropping images from videos.  
 動画をシークバーで操作しながらスクリーンショットを撮るためのアプリ。
 
-# Feature
-### Startup Screen
+# Screenshot
+### Startup Window
 ![image](https://user-images.githubusercontent.com/50891743/151005614-809746b5-bb9f-4bf6-a858-78bd60d1c5b7.png)
 ### Select the directory
 ![image](https://user-images.githubusercontent.com/50891743/151006562-feb1f06b-2333-4980-b751-518f0f69a9b0.png)
 ### Main UI
-* Movie Screen : Video Preview
-* Video Operation Screen : Video Operation UI
-* Directry Viewer Screen : Select Video File UI (Sub-directories can also be loaded.)
+* Movie Window : Video Preview
+* Video Operation Window : Video Operation UI
+* Directry Viewer Window : Select Video File UI (Sub-directories can also be loaded.)
 ![image](https://user-images.githubusercontent.com/50891743/151013258-b5bff0bb-3c1e-4e67-b5b2-eaef9abf08ad.png)
 
 # Requirement
