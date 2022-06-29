@@ -221,10 +221,6 @@ class VideoOperator(object):
 
     def set_save_path(self, save_path=None):
     #    self.user_save_path = save_path
-        print()
-        print(self.user_save_path)
-        print(self.save_path)
-        print()
         if self.save_path is None and save_path is None:
             print('set save_path and create video name directory')
             self.save_path = self.video_path.parent.joinpath(self.video_path.stem)

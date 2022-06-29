@@ -178,6 +178,7 @@ class Main:
                         if not path.parent.exists():
                             path = Path(sg.popup_get_folder('Save Folder'))
                     self.operator.set_save_path(path)
+                    self.operator.user_save_path = path
                     window['s_path'].update(str(path))
 
                 if self.event != '__TIMEOUT__':
