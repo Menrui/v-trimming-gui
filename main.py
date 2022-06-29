@@ -198,9 +198,9 @@ class Main:
                     # フレームカウントをプログレスバーに合わせる
                     _frame_count = int(values['-PROGRESS SLIDER-'])
                     self.operator.set_video_pos(_frame_count)
-                    if values['-PROGRESS SLIDER-'] > values['-END FRAME SLIDER-']:
-                        window['-END FRAME SLIDER-'].update(
-                            values['-PROGRESS SLIDER-'])
+                    # if values['-PROGRESS SLIDER-'] > values['-END FRAME SLIDER-']:
+                    #     window['-END FRAME SLIDER-'].update(
+                    #         values['-PROGRESS SLIDER-'])
 
                 if self.event == '<<<':
                     self.operator.step_backward(-150)
