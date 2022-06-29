@@ -131,7 +131,13 @@ class VideoOperator(object):
         self.save_count = 0
         self.is_init = True
         self.play_status.is_stop = False
-        self.set_save_path(self.user_save_path)
+        if self.user_save_path is None:
+            self.save_path = self.video_path.parent.joinpath(self.video_path.stem)
+            os.makedirs(self.save_path, exist_ok=True)
+            self.set_save_path()
+        else:
+            self.set_save_path(self.user_save_path)
+        
         return True, video
     
     def stop(self):
@@ -178,7 +184,9 @@ class VideoOperator(object):
         if is_read:
             img_name = f'{str(self.video_path.stem)}__{self.save_count:04}.png'
             img_path = self.save_path.joinpath(img_name)
-            cv2.imwrite(str(img_path), screenshot)
+            print(img_path)
+            write_success = cv2.imwrite(str(img_path), screenshot)
+            print(f"write_success: {write_success}")
             is_success = True
         else:
             is_success = False
@@ -213,8 +221,12 @@ class VideoOperator(object):
 
     def set_save_path(self, save_path=None):
     #    self.user_save_path = save_path
+        print()
+        print(self.user_save_path)
+        print(self.save_path)
+        print()
         if self.save_path is None and save_path is None:
-            print('create video name directory')
+            print('set save_path and create video name directory')
             self.save_path = self.video_path.parent.joinpath(self.video_path.stem)
             os.makedirs(self.save_path, exist_ok=True)
         elif self.save_path is not None and save_path is None:

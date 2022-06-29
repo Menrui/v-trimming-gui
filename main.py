@@ -160,7 +160,7 @@ class Main:
                         sg.Print(e)
                     continue
 
-                if self.event == 'screenshot' or self.event == 'Return:36' or self.event == 'Shift_R:62':
+                if self.event in ['screenshot', "Screenshot",'Return:36', 'Shift_R:62']:
                     self.operator.screenshot()
 
                 if self.event == 'Clear':
@@ -235,7 +235,7 @@ class Main:
                     continue
 
                 # Stop
-                if self.event == 'Play / Stop' or self.event == 'space:65' or self.event == 'Control_L:37':
+                if self.event in ['Play / Pause','space:65','Control_L:37']:
                     self.operator.play_status.is_pause = not self.operator.play_status.is_pause
                     window['-PROGRESS SLIDER-'].update(self.operator.get_cur_f())
 
